@@ -1,5 +1,6 @@
 // Create variable targeting counter div 
 let mainNumber = document.querySelector('.counter').textContent;
+let currentNumber = document.querySelector('.current-number');
 
 // Event listener into add function 
 document.querySelector('.more').addEventListener('click', (event) => {
@@ -9,6 +10,10 @@ document.querySelector('.more').addEventListener('click', (event) => {
     mainNumber++
     // Class 'current-number' = var mainNumber 
     document.querySelector('.current-number').textContent = mainNumber;
+
+    if(currentNumber.innerHTML === '50') {
+        alert('Congrats');
+    }
 });
 
 // Event listener into less function 
