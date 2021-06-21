@@ -10,3 +10,5 @@ Concepts covered:
 - innerHTML
 - if statement 
 - alert()
+
+Live Demo: https://dalenchan.tech/js-counter/
