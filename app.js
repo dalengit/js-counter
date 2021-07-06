@@ -14,10 +14,6 @@ function increase(e) {
     e.preventDefault();
     mainNumber++;
     currentNumber.textContent = mainNumber;
-
-    if (mainNumber === '50') {
-        alert('You made it!');
-    }
 }
 
 function decrease(e) {
