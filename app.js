@@ -1,24 +1,27 @@
-// Create variable targeting counter div 
+// Selectors
 let mainNumber = document.querySelector('.counter').textContent;
 let currentNumber = document.querySelector('.current-number');
 
-// Event listener into add function 
-document.querySelector('.more').addEventListener('click', (event) => {
-    // Prevent refresh 
-    event.preventDefault();
-    // Increment variable
-    mainNumber++
-    // Class 'current-number' = var mainNumber 
-    document.querySelector('.current-number').textContent = mainNumber;
+const add = document.querySelector('.more');
+const less = document.querySelector('.less');
 
-    if(currentNumber.innerHTML === '50') {
-        alert('Congrats');
+// Event listeners 
+add.addEventListener('click', increase);
+less.addEventListener('click', decrease);
+
+
+function increase(e) {
+    e.preventDefault();
+    mainNumber++;
+    currentNumber.textContent = mainNumber;
+
+    if (mainNumber === '50') {
+        alert('You made it!');
     }
-});
+}
 
-// Event listener into less function 
-document.querySelector('.less').addEventListener('click', (event) => {
-    event.preventDefault();
-    mainNumber--
-    document.querySelector('.current-number').textContent = mainNumber;
-})
+function decrease(e) {
+    e.preventDefault();
+    mainNumber--;
+    currentNumber.textContent = mainNumber;
+}
